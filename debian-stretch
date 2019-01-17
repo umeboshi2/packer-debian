@@ -1,6 +1,6 @@
 {
   "variables": {
-      "debian_version": "9.4.0"
+      "debian_version": "9.6.0"
   },
   "builders": [
     {
@@ -63,6 +63,7 @@
         "scripts/sudoers.sh",
         "scripts/vagrant.sh",
         "scripts/vbaddguest.sh",
+	"scripts/ansible.sh",
         "scripts/cleanup.sh"
       ],
       "only": ["virtualbox-iso"]

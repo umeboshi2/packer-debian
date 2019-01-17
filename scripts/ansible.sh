@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Ansible prequesites
-apt-get -y install python ruby ruby-json facter ohai
+apt-get -y install python python-pip ruby ruby-json facter ohai
 
 # Install backports for wheezy
 if [ $(facter lsbdistcodename) = 'wheezy' ] ; then
@@ -13,3 +13,6 @@ fi
 apt-get -y install ansible
 touch /var/log/ansible.log
 chown vagrant. /var/log/ansible.log
+
+# install updated ansible via pip
+pip install -U ansible
